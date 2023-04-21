@@ -23,6 +23,7 @@ alias nf="neofetch"
 alias i3conf='nvim ~/.config/i3/config'
 alias polybarconf='nvim ~/.config/polybar/config'
 alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
+alias vimconf='nvim ~/.config/nvim/init.vim'
 
 # Vim 4EVER
 export EDITOR=/usr/bin/nvim
