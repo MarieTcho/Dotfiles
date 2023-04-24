@@ -27,3 +27,6 @@ alias vimconf='nvim ~/.config/nvim/init.vim'
 
 # Vim 4EVER
 export EDITOR=/usr/bin/nvim
+
+# ctrl+R: history search
+bindkey '^R' history-incremental-search-backward
