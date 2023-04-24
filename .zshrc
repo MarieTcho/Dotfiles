@@ -8,6 +8,7 @@ autoload -U promptinit; promptinit
 
 # Completion
 autoload -Uz compinit; compinit
+prompt pure
 
 #zstyle ':completion:*:descriptions' format '%B%d%b%u'
 
@@ -30,3 +31,10 @@ export EDITOR=/usr/bin/nvim
 
 # ctrl+R: history search
 bindkey '^R' history-incremental-search-backward
+
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
